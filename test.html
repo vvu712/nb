@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>test</title>
+    <script>
+      crossorigin = "anonymous";
+    </script>
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+      }
+
+      th,
+      td {
+        padding: 10px 2px;
+      }
+
+      td {
+        color: rgb(90, 116, 58);
+      }
+      .submitBtn {
+        border: none;
+        background-color: rgb(188, 201, 171);
+        font-size: 16px;
+      }
+      #input {
+        width: 150px;
+      }
+
+      input {
+        border: none;
+        border-bottom: 1px solid rgb(188, 201, 171);
+        height: 30px;
+        border-radius: 1px;
+        width: 150px;
+      }
+      #message {
+        height: 150px;
+      }
+      .submitBtn:hover {
+        border-bottom: 1px solid rgb(15, 17, 12) !important;
+        color: white !important;
+        background-color: rgb(213, 219, 204) !important;
+
+        cursor: pointer;
+      }
+
+      .submitBtn:hover {
+        border-top: 2px solid rgb(72, 106, 29) !important;
+        cursor: pointer;
+        padding-top: 15px;
+      }
+      .imgButton {
+        width: 100%;
+        height: 50px;
+      }
+      .imgButton:hover {
+        cursor: pointer;
+        border-top: 1px solid rgb(46, 69, 16);
+        padding-top: 5px;
+      }
+      .pinksection button {
+        background-color: rgb(188, 201, 171);
+        border: none;
+      }
+
+      /*----------------style navBar---------------*/
+      li {
+        min-width: 100px;
+        padding: 8px;
+        margin-right: 22px;
+        margin-left: 22px;
+
+        text-align: center;
+      }
+      a {
+        text-decoration: none;
+        color: rgb(12, 16, 14);
+      }
+
+      a:hover {
+        color: rgb(188, 201, 171);
+        padding-top: 7px;
+
+        cursor: pointer;
+
+        border-top: 2px solid rgb(188, 201, 171);
+      }
+      ul {
+        overflow: hidden;
+        display: flex;
+
+        flex-direction: row;
+        justify-content: space-evenly;
+        padding: 0px;
+        list-style-type: none;
+      }
+
+      /*-----------------end of styling navBar----------*/
+    </style>
+  </head>
+  <body style="text-align: center">
+    <!--header-->
+    <div
+      style="
+        display: flex;
+
+        flex-direction: column;
+      "
+    ></div>
+    <button style="z-index: 1000" onclick="demo()" id="demoBTN2">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Et incidunt nisi
+      cum, accusantium optio iure sunt neque doloribus nam sapiente, harum
+      corporis atque accusamus minima, numquam asperiores in ipsam tempore.
+    </button>
+    <button
+      id="demoBTN"
+      class="signInBTN"
+      style="z-index: 1000"
+      onclick="startDemo();"
+    >
+      TRY A DEMO
+    </button>
+
+    <script>
+      function startDemo() {
+        var demoBTNtext = document.getElementById("demoBTN");
+        demoBTNtext.textContent = "loremefkakfhsjaiohsaoifhsjl";
+      }
+    </script>
+
+    <!--throw away from desgin page-->
+    <!--product features img section position:-->
+    <div
+      id="imgSection"
+      style="
+        background-color: rgb(129, 157, 129);
+        padding: 15px;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: row;
+        position: relative;
+        top: 180px;
+        left: 0;
+        right: 0;
+        min-width: 850px;
+
+        max-width: 850px;
+        z-index: 2;
+      "
+    >
+      <!--small image-->
+      <div
+        class="imgSection"
+        style="
+          z-index: 3;
+          display: flex;
+          flex-direction: column;
+
+          justify-content: space-evenly;
+          align-items: center;
+          border: 1px solid;
+        "
+      >
+        <button
+          onclick="changePic('product')"
+          style="background-color: rgb(92, 50, 57); border: none"
+        >
+          <img
+            id="img1btn"
+            class="imgButton"
+            src="practice pictures nutriwise/kylie's pic.PNG"
+            alt="NutriWise Bot App"
+          />
+        </button>
+        <button onclick="changePic('AI')">
+          <img
+            id="camTextfoodlog"
+            class="imgButton"
+            src="practice pictures nutriwise/AI technology.png"
+            alt="NutriWise Bot helping with logging food data through text and photo inputs"
+          />
+        </button>
+        <button onclick="changePic('scanBarcode')">
+          <img
+            id="img3btn"
+            class="imgButton"
+            src="practice pictures nutriwise/nutritionalInfo.png"
+            alt="barcode scanning function allowing for user to receive nutritional information"
+          />
+        </button>
+        <button onclick="changePic('quest')">
+          <img
+            id="img4btn"
+            class="imgButton"
+            src="practice pictures nutriwise/journal.jpg"
+            alt="customizable characters and quest for users"
+          />
+        </button>
+
+        <button onclick="changePic('imageRecognition')">
+          <img
+            id="img6btn"
+            class="imgButton"
+            src="practice pictures nutriwise/characters.png"
+            alt="idk"
+          />
+        </button>
+      </div>
+
+      <!--big image  cover photo, food logging, scanning, camera recognition, quest, -->
+      <div style="flex: 1; padding: 13px; margin: 0 auto">
+        <img
+          style="
+            z-index: 2;
+
+            margin: 0 auto;
+
+            width: 100%;
+            height: 600px;
+            display: block;
+          "
+          class="imageDisplay"
+          id="product"
+          src="practice pictures nutriwise/kylie's pic.PNG"
+          alt="product"
+        />
+        <img
+          style="
+            z-index: 2;
+
+            margin: 0 auto;
+
+            width: 100%;
+            height: 600px;
+            display: none;
+          "
+          id="AI"
+          class="imageDisplay"
+          src="practice pictures nutriwise/ai technology.png"
+          alt=""
+        />
+
+        <img
+          style="
+            z-index: 2;
+
+            margin: 0 auto;
+
+            width: 100%;
+            height: 600px;
+            display: none;
+          "
+          id="scanBarcode"
+          class="imageDisplay"
+          src="practice pictures nutriwise/nutritionalInfo.png"
+          alt=""
+        />
+        <img
+          style="
+            z-index: 2;
+
+            margin: 0 auto;
+
+            width: 100%;
+            height: 600px;
+            display: none;
+          "
+          id="quest"
+          class="imageDisplay"
+          src="practice pictures nutriwise/journal.jpg"
+          alt=""
+        />
+
+        <img
+          style="
+            z-index: 2;
+
+            margin: 0 auto;
+
+            width: 100%;
+            height: 600px;
+            display: none;
+          "
+          id="imageRecognition"
+          class="imageDisplay"
+          src="practice pictures nutriwise/characters.png"
+          alt=""
+        />
+      </div>
+    </div>
+  </body>
+</html>

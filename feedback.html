@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Feedback</title>
+    <script
+      src="https://kit.fontawesome.com/ba3d3b6eb8.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <link rel="stylesheet" href="style/feedbackStyleSheet.css" />
+    <link rel="stylesheet" href="style/headerStyleSheet.css" />
+  </head>
+  <body>
+    <div class="mainDiv" id="feedbackMainDiv">
+      <!--header section position: fixed-->
+      <div class="headerNav">
+        <!--hamburger menu for phone-->
+        <button class="hamburger" onclick="navigate()">
+          <i
+            style="margin: 20px 10px; color: #bcc9ab"
+            class="fa-solid fa-bars fa-xl"
+          ></i>
+        </button>
+
+        <!--header NutriWise Bot title for phone justify-content is center normal it is space-evenly-->
+        <!--*******for iphone change padding-bottom:25px-->
+        <div class="headerTop" style="padding-bottom: 25px">
+          <!--title and logo-->
+          <img
+            style="width: 50px"
+            src="practice pictures nutriwise/robot.png"
+            alt="logo"
+          />
+          <p style="padding-left: 10px; font-size: 25px">NutriWise Bot</p>
+        </div>
+
+        <!-- Nav Bar -->
+        <div class="NavBarDiv" id="navBarPhone">
+          <ul id="navTab">
+            <li>
+              <a href="index.html">HOME</a>
+            </li>
+            <li>
+              <a href="#feedback" style="color: rgb(162, 174, 146)">FEEDBACK</a>
+            </li>
+            <li>
+              <a href="ourTech.html">OUR TECH</a>
+            </li>
+            <li>
+              <a href="aboutUs.html">ABOUT US</a>
+            </li>
+            <li>
+              <a href="#contact">CONTACT US</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <!--main body section (no header no footer)-->
+      <div class="mainBody">
+        <!--image opener section-->
+        <div class="openerSec imgSec">
+          <img src="practice pictures nutriwise/feedback.png" alt="" />
+          <p>Surveys & Interviews</p>
+        </div>
+
+        <!--first green position: absolute-->
+        <div class="greenSec" style="top: 500px"></div>
+
+        <!--personas-->
+        <div class="personasDiv">
+          <p class="italicTitle">PERSONAS</p>
+
+          <div class="personasImg" id="personasDSC">
+            <div>
+              <p class="personaP">
+                - potential NutriWise users range in ages and profession
+              </p>
+              <p class="personaP">
+                - survey respondents were 93% omnivores and the remaining were
+                vegans with ages ranging from 18-25 years old
+              </p>
+            </div>
+            <div>
+              <p class="personaP">
+                - respondents were curious about nutrition, but needed guidance
+                on nutrition
+              </p>
+              <p class="personaP">
+                - nutrition experts respondents ranging from 7-20 years of
+                experience noted time was a main challenge against nutrition
+              </p>
+            </div>
+          </div>
+
+          <div class="personasImg">
+            <img src="practice pictures nutriwise/elena.png" alt="" />
+            <img src="practice pictures nutriwise/elijah.png" alt="" />
+          </div>
+        </div>
+
+        <!--second green position: absolute-->
+        <div class="greenSec" style="top: 1300px"></div>
+
+        <!--first feedback-->
+
+        <div id="r1FeedbackSec" class="FeedbackSec">
+          <p class="italicTitle">Hear from users like YOU...</p>
+          <p style="margin: 0 auto">*surveys performed 2/2 - 2/21</p>
+
+          <!--body text - intro to nutrwise-->
+          <div class="bodyBox" id="actFeedbackBox">
+            <!--img-->
+            <div class="bodyImg feedbackImg">
+              <img
+                src="practice pictures nutriwise/receptiveness to act.PNG"
+                alt=""
+              />
+              <img
+                src="practice pictures nutriwise/familiarity with ACT.PNG"
+                alt=""
+              />
+            </div>
+            <!--text-->
+            <div class="bodyText" style="flex: 1">
+              <p class="title1">
+                Familiarity and Receptiveness to Acceptance and Commitment
+                Therapy Therapy
+              </p>
+
+              <hr />
+
+              <p style="line-height: 25px; padding-top: 10px">
+                Although 87% of respondents were unfamiliar with Acceptance and
+                Commitment therapy, 66% were somewhat receptive to it and 27%
+                were highly receptive to ACT therapy. This highlights the great
+                potentional ACT therapy have on helping users stay motivated to
+                eat healthier.
+              </p>
+              <p style="line-height: 25px; padding-top: 10px">
+                Noticing the lack of knowledge about the therapy, we expanded
+                upon the page to provide clarification on how our APP would
+                apply ACT.
+              </p>
+            </div>
+          </div>
+
+          <!--body text - ppl <3 ai food logging-->
+          <div class="bodyBox" id="foodlogFeedbackSec">
+            <!--foodlogging feedback text-->
+            <div class="bodyText">
+              <p class="title1">
+                Current Usage of Food Logging vs Usage of Food Logging with
+              </p>
+
+              <hr />
+
+              <p style="line-height: 25px; padding-top: 10px">
+                Due to forgetfulness and a lack of motivation and many other
+                reasons, only 12.2% of respondents log their food data more than
+                serveral times a week. Despite the low number of people actively
+                logging their food data. The survey showed that with an AI bot
+                to assist with this mindless and tedious task, 63.7% would be
+                more likely to log food.
+              </p>
+              <p style="line-height: 25px; padding-top: 10px">
+                To ease the use of NutriWise Bot, an image recognition aspect
+                was added for efficiency to promote user engagement.
+              </p>
+            </div>
+
+            <!--food logging charts-->
+            <div class="bodyImg feedbackImg">
+              <img
+                src="practice pictures nutriwise/current logging.PNG"
+                alt=""
+              />
+              <img src="practice pictures nutriwise/prefer bot.PNG" alt="" />
+            </div>
+          </div>
+        </div>
+
+        <!--third green position: absolute-->
+        <div class="greenSec" style="top: 2200px"></div>
+        <!--fourth green position: absolute-->
+        <div class="greenSec" style="top: 3000px"></div>
+
+        <!--recommend-->
+        <p class="italicTitle" style="position: relative; top: 400px">
+          91.9% of participants would recommend NutriWise Bot to others.
+        </p>
+        <!--fifth green position: absolute-->
+        <div class="greenSec" style="top: 3890px"></div>
+
+        <!--six green position: absolute-->
+        <div class="greenSec removeGreen" style="top: 4800px"></div>
+
+        <!--7th green position: absolute-->
+        <div class="greenSec removeGreen" style="top: 5700px"></div>
+
+        <!--second feedback-->
+        <div class="FeedbackSec" id="r2FeedbackSec">
+          <p class="italicTitle">Hear from experts in the nutrition field</p>
+          <p style="margin: 0 auto">*surveys performed 2/26 - 2/29</p>
+
+          <!--r2 feedback want chatbot example-->
+          <div class="bodyBox" id="chatbotUpdate">
+            <!--image-->
+            <div class="bodyImg feedbackImg">
+              <img src="practice pictures nutriwise/chatupdate.PNG" alt="" />
+            </div>
+            <!--text-->
+            <div class="bodyText" style="flex: 1">
+              <p class="title1">Expansion of AI Chatbot Prototype</p>
+
+              <hr />
+
+              <p style="line-height: 25px; padding: 10px 0px">
+                In response to valuable input from nutrition experts regarding
+                the importance of providing users with both nutritional and
+                culturally accurate information, as well as user requests for a
+                demonstration of our chatbot's capabilities, we created a
+                working prototype. Our working prototype was made to demonstrate
+                the conversational flow and diverse topics that our chatbot can
+                navigate. Due to the limitations of the software, user
+                information and chats could not be saved.
+              </p>
+              <a
+                class="demoBTN"
+                target="_blank"
+                href="https://www.chatbase.co/chatbot-iframe/ZCR4rVFYefr6JTepcRwFD"
+              >
+                TRY A DEMO
+              </a>
+              <p style="line-height: 25px; padding-top: 10px">
+                2 out 4 nutritions when asked about their concerns informed us
+                to be accurate and one suggested information peer-reviewed by
+                dietians and considering cultural traditions, which we plan to
+                incorporate. This prototype is trained on accurate information
+                and is soon to be vetted by nutrition experts, which all of
+                experts surveyed were interested in doing, to ensure its
+                reliability to encourage cultural diversity.
+              </p>
+            </div>
+          </div>
+
+          <!--r2 feedback want clear games-->
+          <!--expanding gamificaiton say experts really like it and many confusion-->
+          <div class="bodyBox" id="nutripalUpdate">
+            <!--foodlogging feedback text-->
+            <div class="bodyText">
+              <p class="title1">Expansion of Games</p>
+
+              <hr />
+
+              <p style="line-height: 25px; padding-top: 10px">
+                With our expert interviews, 4 out of 4 nutrition experts
+                believed in the integration of games to engage users. Initially
+                met with questions about its integration from both users and
+                experts, we've not only addressed concerns but also expanded
+                upon it to exceed expectations.
+              </p>
+              <p style="line-height: 25px; padding-top: 10px">
+                One of the experts requested for more behavioral support, we've
+                refined the gaming aspect to reward users based on their
+                actions. This dynamic system not only fosters engagement, but
+                also reflects our commitment to evolving alongside user needs.
+              </p>
+            </div>
+            <div class="bodyImg">
+              <img src="practice pictures nutriwise/nutripal.PNG" alt="" />
+            </div>
+          </div>
+        </div>
+        <!--8/8 green position: absolute-->
+        <div class="greenSec removeGreen" style="top: 6900px"></div>
+
+        <!--prototype comparisons-->
+        <div class="prototypePreviewsDiv">
+          <div class="preview" id="ogPreview">
+            <p class="italicTitle">Wireframing</p>
+            <iframe
+              src="https://www.youtube.com/embed/YsE2x4SL_o8"
+              frameborder="0"
+              allowfullscreen
+            ></iframe>
+          </div>
+
+          <div class="preview" id="2ndPrototypePreview">
+            <p class="italicTitle">Low-Fidelity Prototype</p>
+            <iframe
+              src="https://www.youtube.com/embed/RDrP_Fon3kc"
+              frameborder="0"
+              allowfullscreen
+            ></iframe>
+          </div>
+        </div>
+
+        <!--summary of changes-->
+        <div class="bodyBox" id="changesSummary">
+          <!--text-->
+          <div class="bodyText" style="flex: 1">
+            <p class="title1">PROTOTYPE UPDATES</p>
+
+            <hr />
+
+            <ul>
+              <li>
+                <strong>image/text based inputs were incorporated</strong> - to
+                reduce time consumption, which many respondents agreed were
+                barriers to usage
+              </li>
+              <li>
+                <strong>expansion of ACT usage</strong> - more expansive
+                demonstration due to users curiosity and lack of knowledge with
+                the topic
+              </li>
+              <li>
+                <strong>expansion of chatbot prototype</strong> - demonstrates
+                converation flow giving realistic example of usage
+              </li>
+              <li>
+                <strong>expansion of games and community</strong> - with
+                majority respondents and 4/4 experts wanting a gaming feature,
+                we implemented and expanded on it
+              </li>
+            </ul>
+          </div>
+          <!--text-->
+          <div class="bodyText" style="flex: 1">
+            <p class="title1">WEBSITE UPDATES</p>
+
+            <hr />
+
+            <ul>
+              <li>
+                <strong>fixed display errors</strong> after feedback from users
+                about imaging errors, the error was fixed
+              </li>
+              <li>
+                <strong>responsive format on varying devices</strong> - made
+                website usable on phones/tablets/laptops
+              </li>
+
+              <li>
+                <strong>modified flow of content</strong> - focused more of
+                displaying the product by moving features to the front
+              </li>
+              <li>
+                <strong>addition of about us page</strong> - 3/4 experts
+                surveyed agreed that an addition of an about us page would
+                increase trust in NutriWise Bot
+              </li>
+            </ul>
+            <p>original website: [insert link]</p>
+          </div>
+        </div>
+      </div>
+
+      <!--footer-->
+      <div id="footer" style="top: 420px"></div>
+    </div>
+
+    <script>
+      function navigate() {
+        let navPage = document.getElementById("navBarPhone");
+        if (navPage.style.display == "none") {
+          navPage.style.display = "block";
+        } else {
+          navPage.style.display = "none";
+        }
+      }
+      fetch("footer.html")
+        .then((response) => response.text())
+        .then((data) => {
+          // Insert the loaded content into the container section
+          document.getElementById("footer").innerHTML = data;
+        })
+
+        .catch((error) => console.error("Error loading content:", error));
+    </script>
+  </body>
+</html>

@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Our Design</title>
+    <script
+      src="https://kit.fontawesome.com/ba3d3b6eb8.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="style/ourdesignStyleSheet.css" />
+    <link rel="stylesheet" href="style/headerStyleSheet.css" />
+    <link rel="stylesheet" href="style/mainFeatureImgSliderStyle.css" />
+  </head>
+  <body>
+    <div class="mainDiv" id="designMainDiv">
+      <!--header section position: fixed-->
+      <div class="headerNav">
+        <!--hamburger menu for phone-->
+        <button class="hamburger" onclick="navigate()">
+          <i
+            style="margin: 20px 10px; color: #bcc9ab"
+            class="fa-solid fa-bars fa-xl"
+          ></i>
+        </button>
+
+        <!--header NutriWise Bot title for phone justify-content is center normal it is space-evenly-->
+        <!--*******for iphone change padding-bottom:25px-->
+        <div class="headerTop" style="padding-bottom: 25px">
+          <!--title and logo-->
+          <img
+            style="width: 50px"
+            src="practice pictures nutriwise/robot.png"
+            alt="logo"
+          />
+          <p style="padding-left: 10px; font-size: 25px">NutriWise Bot</p>
+        </div>
+
+        <!-- Nav Bar -->
+        <div class="NavBarDiv" id="navBarPhone">
+          <ul id="navTab">
+            <li>
+              <a href="index.html" class="NavBar">HOME</a>
+            </li>
+
+            <li>
+              <a href="feedback.html">FEEDBACK</a>
+            </li>
+            <li>
+              <a href="ourTech.html" style="color: rgb(162, 174, 146)"
+                >OUR TECH</a
+              >
+            </li>
+            <li>
+              <a href="aboutUs.html">ABOUT US</a>
+            </li>
+            <li>
+              <a href="#contact">CONTACT US</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="mainBody">
+        <!--workflow slider-->
+        <div
+          style="
+            width: 80%;
+            max-width: 850px;
+            overflow-x: scroll;
+            margin: 0 auto;
+            position: relative;
+            top: 180px;
+            z-index: 2;
+          "
+        >
+          <img
+            src="practice pictures nutriwise/background.jpeg"
+            alt=""
+            style="width: 1600px; height: 300px"
+          />
+          <p
+            style="
+              position: absolute;
+              bottom: 20px;
+              left: 20px;
+              background-color: #bcc9ab;
+              color: white;
+              padding: 10px;
+              font-size: 25px;
+            "
+          >
+            NUTRIWISE BOT WORKFLOW
+          </p>
+        </div>
+
+        <!--first green-->
+        <div class="greenSec" style="top: 450px"></div>
+
+        <!--body text - intro to nutrwise-->
+        <div class="bodyBox" id="LLMDiv">
+          <!--img-->
+          <div class="bodyImg feedbackImg">
+            <img src="practice pictures nutriwise/llm.png" alt="" />
+            <img src="practice pictures nutriwise/nlp robot.jpg" alt="" />
+          </div>
+
+          <!--text-->
+          <div class="bodyText">
+            <p class="title2">Leveraging OpenLLama to Generate Responses</p>
+            <hr />
+            <p class="title3">Processing User Input</p>
+
+            <p style="line-height: 25px">
+              NutriWise Bot leverages OpenLLaMA, an advanced large language
+              model,for its sophisticated natural language processing techniques
+              like tokenization and self-attention mechanisms to analyzes user
+              input with exceptional accuracy. Trained on over 1.2 trillion
+              tokens, including RedPajama pre-trained data sets, this model
+              outperforms previous iterations, enabling NutriWise Bot to provide
+              precise and personalized nutrition guidance to users.
+            </p>
+
+            <p class="title3">Refining NutriWise Bot's responses</p>
+
+            <p style="line-height: 25px">
+              By training the OpenLLaMA language model with specialized datasets
+              focused on nutrition dialogue and cultural insights that is
+              overviewed by nutrition experts, the bot ensures accuracy and
+              relevance in its recommendations. Integration with the Nutritionix
+              API further enriches responses with detailed nutrition information
+              for common foods, enhancing user experience and trust.
+            </p>
+          </div>
+        </div>
+
+        <!--2/3 green-->
+        <div class="greenSec" style="top: 1200px"></div>
+
+        <!--body text 3 -- preview tech page-->
+        <!--body text - intro to nutrwise-->
+        <div class="bodyBox" id="imgRecDiv">
+          <!--text-->
+          <div class="bodyText">
+            <p class="title2">NutriWise Bot Image Recognition Technique</p>
+            <hr />
+            <br />
+
+            <p style="padding-bottom: 30px; line-height: 25px">
+              NutriWise Bot utilizes Hybrid Task Cascade (HTC), a deep learning
+              technique, the API accurately identifies objects and shapes within
+              images. By leveraging a food recognition API that is continuously
+              trained on user-submitted photos from MyFoodRep, the bot can aid
+              in food logging and dietary analysis. NutriWise Bot ensures
+              accuracy and accessibility, with a growing repository that
+              considers diverse cultural food preferences and choices.
+            </p>
+          </div>
+          <img
+            class="bodyImg"
+            src="practice pictures nutriwise/htc.jpg"
+            alt=""
+          />
+        </div>
+
+        <!--3/3 green-->
+        <div class="greenSec" style="top: 2000px"></div>
+      </div>
+
+      <!--footer-->
+      <div id="footer" style="top: 350px"></div>
+    </div>
+
+    <script>
+      function navigate() {
+        let navPage = document.getElementById("navBarPhone");
+        if (navPage.style.display == "none") {
+          navPage.style.display = "block";
+        } else {
+          navPage.style.display = "none";
+        }
+      }
+
+      fetch("footer.html")
+        .then((response) => response.text())
+        .then((data) => {
+          // Insert the loaded content into the container section
+          document.getElementById("footer").innerHTML = data;
+        })
+
+        .catch((error) => console.error("Error loading content:", error));
+    </script>
+  </body>
+</html>

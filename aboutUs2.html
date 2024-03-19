@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About Us</title>
+    <!--awesome font-->
+    <script
+      src="https://kit.fontawesome.com/ba3d3b6eb8.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <link rel="stylesheet" href="style/headerStyleSheet.css" />
+
+    <link rel="stylesheet" href="style/aboutUsStyleSheet.css" />
+  </head>
+  <body>
+    <div class="mainDiv" id="aboutUsMain">
+      <!--header section position: fixed-->
+      <div class="headerNav">
+        <!--hamburger menu for phone-->
+        <button class="hamburger" onclick="navigate()">
+          <i
+            style="margin: 20px 10px; color: #bcc9ab"
+            class="fa-solid fa-bars fa-xl"
+          ></i>
+        </button>
+
+        <!--header NutriWise Bot title for phone justify-content is center normal it is space-evenly-->
+        <!--*******for iphone change padding-bottom:25px-->
+        <div class="headerTop" style="padding-bottom: 25px">
+          <!--title and logo-->
+          <img
+            style="width: 50px"
+            src="practice pictures nutriwise/robot.png"
+            alt="logo"
+          />
+          <p style="padding-left: 10px; font-size: 25px">NutriWise Bot</p>
+        </div>
+
+        <!-- Nav Bar -->
+        <div class="NavBarDiv" id="navBarPhone">
+          <ul id="navTab">
+            <li>
+              <a href="index.html" class="NavBar">HOME</a>
+            </li>
+
+            <li>
+              <a href="feedback.html">FEEDBACK</a>
+            </li>
+            <li>
+              <a href="ourTech.html">OUR TECH</a>
+            </li>
+            <li>
+              <a href="aboutUs.html" style="color: rgb(162, 174, 146)"
+                >ABOUT US</a
+              >
+            </li>
+            <li>
+              <a href="#contact">CONTACT US</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <!--main body-->
+      <div class="mainBody">
+        <!--first green position: absolute-->
+        <div class="greenSec" style="top: 500px"></div>
+        <!--body text - intro to nutrwise-->
+        <div class="bodyBox" id="aboutUsText">
+          <!--img-->
+          <img
+            style="background-color: rgb(250, 248, 221); min-height: 590px"
+            class="bodyImg"
+            src="practice pictures nutriwise/healthy mind healthy life.png"
+            alt=""
+          />
+          <!--text-->
+          <div class="bodyText">
+            <p class="title1">THE REASON BEHIND OUR PRODUCT</p>
+            <p class="title2">
+              Cultivating Wellness: NutriWise Bot's Commitment to Our Core
+              Values
+            </p>
+            <hr />
+
+            <p class="title3">
+              Discover Holistic Nutrition, Motivation, and Cultural Inclusivity
+              for a Healthier Lifestyle
+            </p>
+
+            <p style="line-height: 25px">
+              At NutriWise Bot, our culture prioritizes holistic care, guiding
+              users toward healthier choices for both body and mind. We're
+              dedicated to fostering motivation through continuous engagement,
+              supporting users on their journey to improved well-being. With
+              diverse options and cultural insights from our AI bot, we cater to
+              a broader audience, enhancing overall user engagement.
+            </p>
+          </div>
+        </div>
+
+        <!--our values circles-->
+        <div
+          class="valuesDiv"
+          style="
+            display: flex;
+            margin: 0 auto;
+            max-width: 1000px;
+            position: relative;
+            top: 250px;
+
+            flex-direction: column;
+          "
+        >
+          <div style="display: flex; flex-direction: column">
+            <!--title - Our Core Values-->
+            <div style="text-align: center">
+              <p style="font-style: italic; font-size: 30px">Our Core Values</p>
+              <p>
+                Our mission is to improve user's nutrition by using an AI
+                chatbot to make assistance more accessible.
+              </p>
+            </div>
+            <!--values pics and description-->
+            <div class="ourValues">
+              <!-- Column 1 -->
+              <div class="valueColumn">
+                <img
+                  class="valueImg"
+                  src="practice pictures nutriwise/consumer engagement.png"
+                  alt=""
+                />
+                <div>
+                  <p class="valueName">CUSTOMER ENGAGEMENT</p>
+                  <p id="aboutMotivation" class="valueDsc">
+                    NutriWise Bot actively involves users in meaningful
+                    interactions, providing valuable content and fostering a
+                    sense of community, enhancing both intrinsic and extrinsic
+                    motivations for lasting nutritional knowledge.
+                  </p>
+                </div>
+              </div>
+
+              <!-- Column 2 -- culture -->
+              <div class="valueColumn">
+                <img
+                  class="valueImg"
+                  src="practice pictures nutriwise/culture.jpg"
+                  alt=""
+                />
+                <div>
+                  <p class="valueName">CULTURE</p>
+                  <p id="aboutCulture" class="valueDsc">
+                    Our diverse healthy cuisines from different cultures makes
+                    eating health exciting. This makes cuisines more
+                    personalized increase user adherence.
+                  </p>
+                </div>
+              </div>
+
+              <!-- Column 3 -- holsitic care-->
+              <div class="valueColumn">
+                <img
+                  class="valueImg"
+                  src="practice pictures nutriwise/holistic-care.jpg"
+                  alt=""
+                />
+                <div>
+                  <p class="valueName">HOLISTIC CARE</p>
+                  <p id="aboutHolistic" class="valueDsc">
+                    Beyond only looking at numerical food data, our company aims
+                    at healing the user holisitically by improving user's
+                    mindset and improving user's intrinsic and extrinsic
+                    motivation.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!--footer-->
+      <div id="footer"></div>
+    </div>
+
+    <script>
+      /*hamburger button for iphone nav tab*/
+      function navigate() {
+        let navPage = document.getElementById("navBarPhone");
+        if (navPage.style.display == "none") {
+          navPage.style.display = "block";
+        } else {
+          navPage.style.display = "none";
+        }
+      }
+      /*flip value cards*/
+      function values(value) {
+        var valueText = document.getElementById(value);
+        if (valueText.style.display === "none") {
+          valueText.style.display = "block";
+        } else {
+          valueText.style.display = "none";
+        }
+      }
+
+      /*---------------prototyp combine later-----------*/
+
+      fetch("footer.html")
+        .then((response) => response.text())
+        .then((data) => {
+          // Insert the loaded content into the container section
+          document.getElementById("footer").innerHTML = data;
+        })
+
+        .catch((error) => console.error("Error loading content:", error));
+    </script>
+  </body>
+</html>

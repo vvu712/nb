@@ -1,0 +1,177 @@
+/*demo btn*/
+.demoBTN {
+    height:35px;
+    border:none;
+    margin: 0px auto;
+    display:flex;
+    min-width:190px;
+    justify-content: center;
+    
+    
+    padding: 8px 10px;
+
+
+    background-color:rgb(165, 199, 124);
+    color:white;
+    font-size:19px;
+    font-weight:700;
+    
+
+}
+.demoBTN:hover{
+    cursor:pointer;
+    padding-top:5px;
+    border-top: 2px solid rgb(188, 201, 171)
+}
+/*size feedback page*/
+
+.personasDiv{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    top: 250px;
+    width: 100%;
+    text-align: center;
+    align-items: center;
+    z-index:2;
+    
+}
+.personaP{
+    font-size: 20px; max-width: 500px; padding-bottom: 15px
+}
+.personasImg img{
+    padding: 15px;
+    max-width:490px;
+    width:95%;
+   
+    
+    
+}
+#personasDSC{
+    display: flex;
+    flex-direction: column;
+}
+/*r1 feedback sec*/
+.FeedbackSec{
+    margin-bottom: 55px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+   
+}
+#r1FeedbackSec{
+    top:320px
+}
+#r2FeedbackSec{
+    top:450px;
+}
+
+
+
+#foodlogFeedbackSec{
+    top:50px;
+}
+
+
+.bodyImg img{
+    width: 100%;
+    
+    flex:1;
+    padding:10px;
+    
+}
+#nutripalUpdate img{
+    
+    min-width: 800px;
+    height:100%;
+    
+}
+#nutripalUpdate .bodyImg{
+    min-height:550px;
+    overflow-x:scroll
+    
+} 
+
+#chatbotUpdate img{
+    
+    min-width: 1400px;
+    height:100%;
+    
+}
+#chatbotUpdate .bodyImg {
+    min-height:550px;
+    overflow-x:scroll;
+    
+    
+} 
+
+.feedbackImg{
+    background-color: #ffffff;
+    
+}
+
+/*preview prototype section*/
+.prototypePreviewsDiv{
+    display:flex;
+    flex-direction: column;
+    max-width: 1350px;
+    width:90%;
+    margin: 0 auto;
+    position: relative;
+    top:380px;
+
+    z-index: 100;
+    
+
+}
+.prototypePreviewsDiv div{
+    flex:1;
+    text-align: center;
+    position:relative;
+    padding:40px 20px;
+    
+   
+}
+.prototypePreviewsDiv iframe{
+    width:100%;
+    min-height:400px;
+    
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+
+    
+    
+}
+
+
+
+/*final sec (7/7) summary changes*/
+#changesSummary{
+    top:400px;
+}
+#changesSummary ul{
+    padding: 10px 30px;
+}
+
+#changesSummary li{
+    padding: 5px 0px;
+}
+
+@media only screen and (min-width:800px){
+    #personasDSC{
+        flex-direction: row;
+    }
+    
+}
+
+@media only screen and (min-width:1000px){
+    .feedbackImg{
+        flex-direction:column !important;
+        background-color: #ffffff;
+        
+    }
+    .prototypePreviewsDiv{
+        flex-direction: row;
+        
+    }
+    
+}

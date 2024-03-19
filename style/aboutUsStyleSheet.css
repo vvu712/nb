@@ -1,0 +1,169 @@
+
+
+/*preview prototype section*/
+.prototypePreviewsDiv{
+  display:flex;
+  
+  max-width: 1350px;
+  width:90%;
+  margin: 0 auto;
+  position: relative;
+  top:280px;
+
+  z-index: 100;
+  
+
+}
+.prototypePreviewsDiv div{
+  
+  text-align: center;
+  position:relative;
+  padding:40px 20px;
+  
+ 
+}
+.prototypePreviewsDiv iframe{
+  width:100%;
+  
+  min-height:400px;
+  
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+  
+}
+/*------*/
+#tenMinVideo{
+  max-width:700px;
+}
+/*background section*/
+.body1{
+  top: 380px;
+  left: 10px;
+  right: 10px;
+  min-width:350px;
+  width:80%;
+  max-width:850px;
+  
+  height:640px;
+  display: flex;
+  position: relative;
+  margin: 0 auto;
+  z-index: 2;
+}
+h1{
+color:rgb(135, 145, 122);
+padding-bottom:15px
+}
+.backgroundText{
+position: absolute;
+background-color: rgb(255, 255, 255);
+margin: 40px 20px;
+padding: 20px 10px;
+max-width:450px;
+
+
+}
+
+
+/*gap analysis sec*/
+.gapAnalysisDiv{
+position: relative; 
+top: 450px;
+z-index: 2;
+text-align: center
+
+}
+.tableDiv{
+overflow-x:scroll;
+width:85%;
+min-width:350px;
+
+max-width:850px;
+margin: 0 auto
+}
+.tableDiv table{
+border: none;
+background-color: rgb(131, 159, 95);
+}
+.tableDiv tr{
+background-color: rgb(255, 255, 255);
+color: rgb(255, 255, 255);
+font-size: 18px;
+}
+.tableDiv th{
+width:210px;
+padding: 10px 2px;
+}
+td {
+padding: 10px 2px;
+color: rgb(90, 116, 58);
+}
+#differentText{
+top:550px;
+z-index:10;
+min-width:350px;
+}
+
+#healthymindBodyBox{
+  top:650px
+}
+
+/*value section*/
+.valuesDiv{
+  display: flex;
+  margin: 0 auto;
+  max-width: 1000px;
+  position: relative;
+  top: 700px;
+
+  flex-direction: column;
+}
+/*buttons for read more values*/
+
+.valueColumn{
+  flex: 1;
+  padding: 35px;
+
+  text-align: center;
+}
+.valueName{
+  font-style: italic;
+  font-size: 24px;
+  padding-bottom: 5px;
+}
+.valueDsc{
+  line-height: 25px; 
+  display: block;
+  max-width:500px;
+  margin:0 auto;
+
+}
+
+
+.valueImg{
+  width: 250px; 
+  height: 250px; 
+  border-radius: 125px
+}
+.ourValues{
+  display: flex;
+  flex-direction: column;
+
+  max-width: 1000px;
+
+  padding-bottom: 40px;
+}
+
+@media only screen and (min-width:1000px){
+  
+  .ourValues{
+    flex-direction: row;
+  }
+ 
+  #removeGreen{
+    display:none
+  }
+  .ourValues{
+    flex-direction: row;
+  }
+  
+}

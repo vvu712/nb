@@ -1,0 +1,30 @@
+/*for class (.) for id (#)*/
+* {
+    margin: 0px;
+    padding: 0px;
+    
+    font-family:'Times New Roman', Times, serif;
+    
+}
+
+/*preview prototype section*/
+.prototypePreviewsDiv {
+    display: flex;
+    max-width: 900px;
+    width: 90%;
+    margin: 0 auto;
+    position: relative;
+    z-index: 100;
+  }
+  .prototypePreviewsDiv div {
+    text-align: center;
+    position: relative;
+    padding: 40px 20px;
+  }
+  .prototypePreviewsDiv iframe {
+    width: 100%;
+
+    min-height: 400px;
+
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+  }

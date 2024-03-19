@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=`, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .textConvo {
+        background-color: white;
+        width: 320px;
+        height: 500px;
+        position: relative;
+      }
+      .botMessageDiv {
+        position: relative;
+        display: flex;
+      }
+      .logoIcon {
+        width: 50px;
+      }
+      .logoIcon img {
+        width: 50px;
+        height: 50px;
+        border-radius: 25px;
+        position: absolute;
+        bottom: 0px;
+      }
+      .botMessage {
+        margin-left: 30px;
+        flex-direction: column;
+        display: flex;
+        font-size: 12px;
+        border-radius: 10px;
+        background-color: rgb(214, 222, 215);
+      }
+
+      .botMessage p {
+        border-radius: 10px;
+        padding: 0px 10px;
+        margin: 10px;
+
+        flex: 1;
+
+        line-height: 20px;
+      }
+      .userMessage {
+        display: inline;
+      }
+      .userMessage p {
+        background-color: rgb(255, 255, 255);
+        padding: 10px;
+        border-radius: 10px;
+        line-height: 20px;
+        font-size: 12px;
+        display: inline;
+        position: absolute;
+        right: 0px;
+        z-index: 20;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="img1">
+      <img
+        src="practice pictures nutriwise/scan product.PNG"
+        alt=""
+        style="width: 900px; height: 500px"
+      />
+      <div
+        class="textConvo"
+        style="
+          top: 100px;
+          right: 100px;
+          position: absolute;
+          background: none;
+          display: none;
+        "
+      >
+        <div class="botMessageDiv">
+          <div class="logoIcon">
+            <img src="practice pictures nutriwise/robot.png" alt="" />
+          </div>
+          <div class="botMessage">
+            <p>
+              Hey, just checked the marinara label. Noticed it's got high
+              fructose corn syrup and hydrogenated oils. Those are not great
+              because the corn syrup can spike sugar levels and the oils have
+              trans fats, which aren't good for the heart. Might want to find
+              something with better ingredients for a healthier choice!
+            </p>
+            <p>
+              Rao's Homemade, Muir Glen, and Dave's Gourmet are solid picks for
+              healthier options.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="img2">
+      <img
+        src="practice pictures nutriwise/scan barcode.PNG"
+        alt=""
+        style="width: 900px; height: 600px"
+      />
+      <div
+        class="textConvo"
+        style="
+          top: 100px;
+          right: 100px;
+          position: absolute;
+          background: none;
+          display: none;
+        "
+      >
+        <div class="botMessage">
+          <div class="logoIcon">
+            <img src="practice pictures nutriwise/robot.png" alt="" />
+          </div>
+
+          <p>
+            Hey! Saw you scanned some DIVINA pitted frescatrano olives. Nice
+            choice! They're a tasty snack with heart-healthy fats, fiber, and
+            essential nutrients. Just watch out for the salt. Enjoy munching!
+          </p>
+        </div>
+        <div class="userMessage">
+          <p>Should I buy it?</p>
+        </div>
+        <div class="botMessage" style="position: relative; top: 50px">
+          <div class="logoIcon">
+            <img src="practice pictures nutriwise/robot.png" alt="" />
+          </div>
+
+          <p>
+            They are perfect for spicing up your meals and you've previously
+            showed interest in more tangy cuisines. Just watch out for your
+            sodium levels because they have been high recently.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="img3">
+      <img
+        src="practice pictures nutriwise/acaifoodlog.jpg"
+        alt=""
+        style="width: 800px; height: 500px"
+      />
+      <div
+        class="textConvo"
+        style="top: 1400px; left: 670px; position: absolute; background: none"
+      >
+        <div class="botMessageDiv">
+          <div class="logoIcon">
+            <img src="practice pictures nutriwise/robot.png" alt="" />
+          </div>
+          <div class="botMessage">
+            <p>
+              It looks like you've submitted a picture of an acai bowl. Great
+              choice! Let me log that for you.
+            </p>
+            <ul style="background-color: rgb(214, 222, 215); padding: 0px 30px">
+              <li>Calories: 300</li>
+              <li>Protein: 5g</li>
+              <li>Fat: 10g</li>
+              <li>Carbohydrates: 45g</li>
+              <li>Fiber: 8g</li>
+              <li>Sugar: 25g</li>
+            </ul>
+            <p padding:0px;margin:0px>Great choice!</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

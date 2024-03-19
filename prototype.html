@@ -1,0 +1,714 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>prototype</title>
+    <script
+      src="https://kit.fontawesome.com/ba3d3b6eb8.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <link rel="stylesheet" href="style/prototypeStyleSheet.css" />
+  </head>
+  <style>
+    /*preview prototype section*/
+    .prototypePreviewsDiv {
+      display: flex;
+      max-width: 900px;
+      width: 90%;
+      margin: 0 auto;
+      position: relative;
+      z-index: 100;
+    }
+    .prototypePreviewsDiv div {
+      text-align: center;
+      position: relative;
+      padding: 40px 20px;
+    }
+    .prototypePreviewsDiv iframe {
+      width: 100%;
+
+      min-height: 400px;
+
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+    }
+  </style>
+  <body>
+    <div class="bodyBox" id="demoPreview">
+      <!--text-->
+      <div class="bodyText" style="flex: 1">
+        <div class="prototypePreviewsDiv" style="margin-right: 20px">
+          <iframe
+            src="https://www.youtube.com/embed/of4XzrbkknM"
+            frameborder="0"
+            allowfullscreen
+          ></iframe>
+        </div>
+      </div>
+      <!--text-->
+      <div class="bodyText" style="flex: 1">
+        <div
+          class="tryDemoDiv"
+          style="
+            padding: 20px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+            background-color: rgb(233, 227, 227);
+            text-align: center;
+          "
+        >
+          <pre style="font-size: 25px; font-weight: 700">
+Click the button to meet your 
+futuristic nutrition buddy!</pre
+          >
+          <button
+            id="demoBTN"
+            class="signInBTN"
+            style="z-index: 1000"
+            onclick="startDemo();"
+          >
+            TRY A DEMO
+          </button>
+          <p class="disclaimer">
+            *disclaimer the chatbot featured on here is a mere prototype to
+            showcase a working AI nutrition-focused chatbot
+          </p>
+          <p class="disclaimer">
+            *lacks image input capabilities and ability to integrate user
+            history into response due to a lack of data storage
+          </p>
+        </div>
+      </div>
+    </div>
+    <!--products position:absolute; top:180px-->
+
+    <div class="prototypeSection">
+      <div class="prototypePreviewsDiv" style="margin-right: 20px">
+        <iframe
+          src="https://www.youtube.com/embed/of4XzrbkknM"
+          frameborder="0"
+          allowfullscreen
+        ></iframe>
+      </div>
+      <!--demo prototype-->
+      <div class="demo" style="display: none">
+        <!--black screen prototype -->
+        <div class="blackDiv">
+          <!--top button-->
+          <div class="speakerHole"></div>
+          <!--white screen-->
+          <div class="whiteScreen">
+            <!--opening page-->
+            <div class="prototypePages" id="openingPage" style="display: none">
+              <p class="title">Say hello to NutriWise Bot,</p>
+              <img
+                class="logo"
+                src="practice pictures nutriwise/robot.png"
+                alt="logo"
+              />
+              <p
+                style="
+                  padding-top: 10px;
+                  font-size: 20px;
+                  width: 220px;
+                  font-weight: 700;
+                "
+              >
+                your AI nutrition buddy available 24/7 to help you with your
+                nutritions
+              </p>
+
+              <!--change to none for anything bigger than phone-->
+              <div class="removeDemoSecLaptop">
+                <button
+                  id="demoBTN"
+                  class="signInBTN"
+                  style="z-index: 1000"
+                  onclick="startDemo();"
+                >
+                  TRY A DEMO
+                </button>
+                <p class="disclaimer">
+                  *disclaimer the chatbot featured on here is a mere prototype
+                  to showcase a working AI nutrition-focused chatbot
+                </p>
+                <p class="disclaimer">
+                  *lacks image input capabilities and ability to integrate user
+                  history into response due to a lack of data storage
+                </p>
+              </div>
+            </div>
+
+            <!--sign in page-->
+            <div class="prototypePages" id="signInPage">
+              <p class="title">NutriWise</p>
+              <img
+                class="logo"
+                src="practice pictures nutriwise/robot.png"
+                alt="logo"
+              />
+              <p class="signIN">SIGN IN</p>
+
+              <div class="inputDiv">
+                <label for="emailEnter">email</label>
+                <input type="text" id="emailEnter" />
+              </div>
+
+              <div class="inputDiv">
+                <label for="pass">password</label>
+                <input type="text" id="pass" />
+              </div>
+
+              <button
+                class="signInBTN"
+                onclick="changePage('signInPage','home');back2SignInBTN();"
+              >
+                Sign In
+              </button>
+
+              <div class="forgotDiv">
+                <p>Forgot password?</p>
+                <button
+                  id="inBTN"
+                  onclick="changePage('signInPage','signUpPage'); back2SignInBTN();"
+                  class="signUpBTN"
+                >
+                  SIGN UP
+                </button>
+              </div>
+            </div>
+
+            <!--sign up page-->
+            <div class="prototypePages" id="signUpPage">
+              <p class="signUpTitle" style="padding: 15px">SIGN UP DEMO</p>
+              <div class="inputDiv">
+                <label for="emailPrototype">email</label>
+                <input type="text" id="emailPrototype" />
+              </div>
+
+              <div class="inputDiv">
+                <label for="passSignUp">password</label>
+                <input type="text" id="passSignUp" />
+              </div>
+              <button
+                onclick="changePage('signUpPage','genQP');back2SignInBTN();"
+                class="continueBTN"
+              >
+                Continue
+              </button>
+            </div>
+
+            <!--general questions-->
+            <div id="genQP" class="prototypePages">
+              <p style="position: absolute; top: 65px">LET'S GET TO KNOW YOU</p>
+              <div id="genQuestions">
+                <!--allquestions but dietary preference-->
+                <div
+                  style="margin: 0 auto; display: flex; flex-direction: column"
+                >
+                  <label for="firstName">FIRST NAME*</label>
+                  <input id="firstName" type="text" />
+
+                  <label for="lastName">LAST NAME*</label>
+                  <input id="lastName" type="text" />
+
+                  <label for="DOB">DATE OF BIRTH*</label>
+                  <input id="DOB" type="text" />
+
+                  <div>
+                    <!--weight-->
+                    <label for="weight">WEIGHT*</label>
+                    <!--weight-->
+                    <div>
+                      <input id="weight" type="number" />
+                      <label for="weight">lb</label>
+                    </div>
+                  </div>
+
+                  <div>
+                    <!--height-->
+                    <label for="heightFt">HEIGHT*</label>
+                    <div style="display: flex">
+                      <div style="flex: 1">
+                        <!--feet-->
+                        <input
+                          id="heightFt"
+                          type="number"
+                          style="width: 30px"
+                        />
+                        <label for="heightFt">ft</label>
+                      </div>
+                      <div style="flex: 1">
+                        <!--in-->
+                        <input
+                          id="heightIN"
+                          type="number"
+                          style="width: 30px"
+                        />
+                        <label for="heightIN">in</label>
+                      </div>
+                    </div>
+                  </div>
+
+                  <label for="ethnicity">ETHNICITY?</label>
+                  <input id="ethnicity" type="text" />
+
+                  <label for="nationality">NATIONALITY?</label>
+                  <input id="nationality" type="text" />
+
+                  <label for="restriction">DIETARY RESTRICTIONS?</label>
+                  <input id="restriction" type="text" />
+
+                  <label for="medHistory">MEDICAL HISTORY?</label>
+                  <input id="medHistory" type="text" />
+
+                  <label for="gender">GENDER?</label>
+                  <input id="gender" type="text" />
+
+                  <!--dietary preference-->
+                  <div class="dietaryPref">
+                    <p>CUISINE PREFERENCES</p>
+                    <p>Select all that applies</p>
+                    <div class="checkboxSec">
+                      <div class="checkboxList">
+                        <div class="checkboxItem">
+                          <!--chinese-->
+                          <input
+                            type="checkbox"
+                            id="chinese"
+                            value="chinese"
+                            name="preference"
+                          />
+                          <label for="chinese">Chinese</label>
+                        </div>
+
+                        <div class="checkboxItem">
+                          <!--italian-->
+                          <input
+                            type="checkbox"
+                            id="italian"
+                            value="italian"
+                            name="preference"
+                          />
+                          <label for="italian">Italian</label>
+                        </div>
+
+                        <div class="checkboxItem">
+                          <!--mexican-->
+                          <input
+                            type="checkbox"
+                            id="mexican"
+                            value="mexican"
+                            name="preference"
+                          />
+                          <label for="mexican">Mexican</label>
+                        </div>
+
+                        <div class="checkboxItem">
+                          <!--mediterrean-->
+                          <input
+                            type="checkbox"
+                            id="mediterrean"
+                            value="mediterrean"
+                            name="preference"
+                          />
+                          <label for="indian">Mediterrean</label>
+                        </div>
+
+                        <div class="checkboxItem">
+                          <!--hawaiian-->
+                          <input
+                            type="checkbox"
+                            id="hawaiian"
+                            value="hawaiian"
+                            name="preference"
+                          />
+                          <label for="hawaiian">Hawaiian</label>
+                        </div>
+
+                        <div class="checkboxItem">
+                          <!--indian-->
+
+                          <input
+                            type="checkbox"
+                            id="indian"
+                            value="indian"
+                            name="preference"
+                          />
+                          <label for="indian">Indian</label>
+                        </div>
+
+                        <div class="checkboxItem">
+                          <!--thai-->
+                          <input
+                            type="checkbox"
+                            id="thai"
+                            value="thai"
+                            name="preference"
+                          />
+                          <label for="thai">Thai</label>
+                        </div>
+                      </div>
+
+                      <div class="checkboxList">
+                        <div class="checkboxItem">
+                          <!--Filipino-->
+                          <input
+                            type="checkbox"
+                            id="Filipino"
+                            value="Filipino"
+                            name="preference"
+                          />
+                          <label for="Filipino">Filipino</label>
+                        </div>
+
+                        <div class="checkboxItem">
+                          <!--japan-->
+                          <input
+                            type="checkbox"
+                            id="japan"
+                            value="japan"
+                            name="preference"
+                          />
+                          <label for="japan">Japanese</label>
+                        </div>
+
+                        <div class="checkboxItem">
+                          <!--korean-->
+                          <input
+                            type="checkbox"
+                            id="korean"
+                            value="korean"
+                            name="preference"
+                          />
+                          <label for="korean">Korean</label>
+                        </div>
+
+                        <div class="checkboxItem">
+                          <!--greek-->
+                          <input
+                            type="checkbox"
+                            id="greek"
+                            value="greek"
+                            name="preference"
+                          />
+                          <label for="greek">Greek</label>
+                        </div>
+
+                        <div class="checkboxItem">
+                          <!--viet-->
+                          <input
+                            type="checkbox"
+                            id="viet"
+                            value="viet"
+                            name="preference"
+                          />
+                          <label for="viet">Vietnamese</label>
+                        </div>
+
+                        <div class="checkboxItem">
+                          <!--Caribbean-->
+                          <input
+                            type="checkbox"
+                            id="Caribbean"
+                            value="Caribbean"
+                            name="preference"
+                          />
+                          <label for="Caribbean">Caribbean</label>
+                        </div>
+
+                        <div class="checkboxItem">
+                          <!--Caribbean-->
+                          <input
+                            type="checkbox"
+                            id="lao"
+                            value="lao"
+                            name="preference"
+                          />
+                          <label for="lao">Lao</label>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <button
+                style="position: absolute; bottom: 30px"
+                class="continueBTN"
+                onclick=" changePage('genQP', 'home')"
+              >
+                Continue
+              </button>
+            </div>
+
+            <!--missing bottom green home page - should be display flex -->
+            <div
+              class="prototypePages"
+              id="home"
+              style="justify-content: space-between; display: none"
+            >
+              <!--top green of home page-->
+              <div
+                id="topHome"
+                class="navBarPage"
+                style="
+                  display: flex;
+                  justify-content: center;
+                  flex-direction: column;
+                "
+              >
+                <div class="topGreen">
+                  <p
+                    style="
+                      font-size: 30px;
+                      position: absolute;
+                      bottom: 10px;
+                      left: 50px;
+                    "
+                  >
+                    NutriWise
+                  </p>
+                </div>
+
+                <!--mid section-->
+                <div class="midSec">
+                  <!--mid section where u can pick where to go next-->
+                  <p style="font-size: 17px">Welcome back, Elena!</p>
+                  <button onclick="changePage('home','foodLog')">
+                    LOG FOOD
+                  </button>
+                  <button onclick="changePage('home','recipes')">
+                    RECIPES
+                  </button>
+                  <button onclick="changePage('home','therapyAdvice')">
+                    ADVICE BY ACT
+                  </button>
+                  <button onclick="changePage('home','community')">
+                    COMMUNITY
+                  </button>
+                </div>
+              </div>
+
+              <!--nav bar pages-->
+              <div style="position: absolute; bottom: 80px">
+                <!--chatbot-->
+
+                <div>
+                  <iframe
+                    src="https://www.chatbase.co/chatbot-iframe/ZCR4rVFYefr6JTepcRwFD"
+                    title="Chatbot"
+                    width="100%"
+                    style="
+                      position: absolute;
+                      top: 180px;
+                      left: 0;
+                      right: 0;
+                      margin: 0 auto;
+                      width: 350px;
+                      min-height: 500px;
+                      z-index: 100013;
+                    "
+                    frameborder="0"
+                  ></iframe>
+                </div>
+                <div
+                  class="navBarPage"
+                  id="chatbot"
+                  style="
+                    display: none;
+                    flex-direction: column;
+                    align-items: center;
+                  "
+                >
+                  <div>
+                    <img
+                      id="chatbotImg"
+                      class="navBarImage"
+                      style="display: flex"
+                      src="practice pictures nutriwise/chatbot.png"
+                      alt=""
+                    />
+                  </div>
+
+                  <div class="textNutriWise">
+                    <button><i class="fa-solid fa-camera fa-2xl"></i></button>
+                    <button>
+                      <i class="fa-solid fa-microphone fa-2xl"></i>
+                    </button>
+                    <input
+                      id="chatbotTextBox"
+                      style="width: 180px; padding-left: 10px"
+                      type="text"
+                      placeholder="click here to chat"
+                    />
+                    <button>
+                      <i class="fa-regular fa-paper-plane fa-2xl"></i>
+                    </button>
+                  </div>
+                </div>
+
+                <!--explore-->
+                <div
+                  class="navBarPage"
+                  id="exploreRecipes"
+                  style="
+                    display: none;
+                    flex-direction: column;
+                    align-items: center;
+                  "
+                >
+                  <p>Explore</p>
+                  <img
+                    style="display: flex"
+                    class="navBarImage"
+                    src="practice pictures nutriwise/explore.png"
+                    alt="explore recipes"
+                  />
+                </div>
+
+                <!--profile-->
+                <img
+                  class="navBarPage navBarImage"
+                  id="profile"
+                  src="practice pictures nutriwise/profile.png"
+                  alt=""
+                  style="display: none"
+                />
+              </div>
+
+              <!--bottom green of home page-->
+              <div
+                class="bottomHome"
+                style="
+                  position: absolute;
+                  bottom: 0px;
+
+                  background-color: rgb(188, 201, 171);
+                  height: 75px;
+                  width: 295px;
+                  border-bottom-right-radius: 25px;
+                  border-bottom-left-radius: 25px;
+                  display: flex;
+                  align-items: center;
+                  justify-content: space-evenly;
+                "
+              >
+                <button
+                  onclick="changeNavPage('topHome','.navBarPage')"
+                  style="border-bottom-left-radius: 20px"
+                >
+                  Home
+                </button>
+                <button>NutriPal</button>
+                <button onclick="changeNavPage('chatbot','.navBarPage')">
+                  NutriWise Bot
+                </button>
+                <button onclick="changeNavPage('exploreRecipes','.navBarPage')">
+                  Explore
+                </button>
+                <button
+                  onclick="changeNavPage('profile','.navBarPage')"
+                  style="border-bottom-right-radius: 20px"
+                >
+                  My Profile
+                </button>
+
+                <button style="background: none"></button>
+              </div>
+            </div>
+
+            <!--home tabs (log food, recipes, advice, community)-->
+            <div class="homePages">
+              <div id="foodLog" style="display: block" class="prototypePages">
+                <button onclick="changePage('foodLog','home')">BACK</button>
+                <p>LOG FOOD</p>
+                <img
+                  style="display: block"
+                  src="practice pictures nutriwise/log food.png"
+                  alt=""
+                />
+                <button
+                  style="
+                    position: absolute;
+                    background: none;
+                    width: 200px;
+                    height: 113px;
+                    top: 70px;
+                    left: 10px;
+                  "
+                ></button>
+              </div>
+
+              <div class="prototypePages" id="recipes" style="display: none">
+                <button onclick="changePage('recipes','home')">BACK</button>
+                <p>RECIPES</p>
+                <img src="practice pictures nutriwise/explore.png" alt="" />
+              </div>
+
+              <div
+                class="prototypePages"
+                id="therapyAdvice"
+                style="display: none"
+              >
+                <button onclick="changePage('therapyAdvice','home')">
+                  BACK
+                </button>
+                <p>ADVICE BY ACT</p>
+                <img
+                  style="display: block"
+                  src="practice pictures nutriwise/advice on act.png"
+                  alt=""
+                />
+              </div>
+
+              <div class="prototypePages" id="community" style="display: none">
+                <button onclick="changePage('community','home')">BACK</button>
+                <p>COMMUNITY</p>
+                <img
+                  style="display: block"
+                  src="practice pictures nutriwise/community.png"
+                  alt=""
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!--text section change to display:none for iphone and smaller-->
+      <div
+        class="tryDemoDiv"
+        style="
+          padding: 20px;
+          box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+          background-color: rgb(233, 227, 227);
+          text-align: center;
+        "
+      >
+        <pre style="font-size: 25px; width: 390px; font-weight: 700">
+Click the button to meet your 
+futuristic nutrition buddy!</pre
+        >
+        <button
+          id="demoBTN"
+          class="signInBTN"
+          style="z-index: 1000"
+          onclick="startDemo();"
+        >
+          TRY A DEMO
+        </button>
+        <p class="disclaimer">
+          *disclaimer the chatbot featured on here is a mere prototype to
+          showcase a working AI nutrition-focused chatbot
+        </p>
+        <p class="disclaimer">
+          *lacks image input capabilities and ability to integrate user history
+          into response due to a lack of data storage
+        </p>
+      </div>
+    </div>
+    <script src="prototypeFunctions.js">
+      /*---------------prototype-----------*/
+    </script>
+  </body>
+</html>

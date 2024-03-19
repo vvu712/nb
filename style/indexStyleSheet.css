@@ -1,0 +1,68 @@
+#demoPreview{
+  top:180px;
+  background: none;
+  border:none
+}
+.disclaimer{
+  padding-bottom:10px;
+  font-size:10px;
+  width:250px;
+  margin: 0 auto
+}
+
+#aboutNutriWiseText {
+  top: 200px;
+  min-height: 750px;
+  
+  
+}
+
+#featureSlider{
+  top:200px;
+  z-index:2;
+
+}
+
+#techPreview{
+  top:150px;
+}
+
+#nutriWiseOriginText{
+  top: 200px;
+  
+}
+
+.bodyImg img{
+  width: 100%;
+  
+  flex:1;
+  padding:10px;
+}
+@media only screen and (min-width:1000px){
+  
+  #aboutNutriWiseText {
+   
+    min-height:500px;
+    overflow: hidden;
+    
+}
+#techPreview .bodyImg{
+  min-height:610px;
+}
+}
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+

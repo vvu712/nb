@@ -1,0 +1,41 @@
+#workflowSlider{
+  top:180px;
+  z-index:2;
+}
+
+#LLMDiv{
+  top:220px;
+  overflow: hidden;
+  
+}
+
+#LLMDiv .bodyImg{
+  min-height:500px;
+  background-color: black;
+}
+
+#imgRecDiv{
+  top:300px;
+  min-height:500px
+}
+
+.bodyImg img{
+  width: 100%;
+  flex:1;
+  
+}
+
+
+
+
+@media only screen and (min-width:1000px){
+  .feedbackImg{
+      flex-direction:column !important;
+      
+      
+  }
+
+  #LLMDiv .bodyImg{
+    min-height:700px;
+  }
+}
